@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkesb10jedlo5"]
+
+[ext_resource type="PackedScene" uid="uid://dkpfxqnq1syxj" path="res://src/scene/blocos_estrutura/bloco_inicial.tscn" id="1_5qs3y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nwjlu"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_nb23i"]
+sky_material = SubResource("ProceduralSkyMaterial_nwjlu")
+
+[sub_resource type="Environment" id="Environment_dewk5"]
+background_mode = 2
+sky = SubResource("Sky_nb23i")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Word" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dewk5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Bloco_Inicial" parent="." instance=ExtResource("1_5qs3y")]
