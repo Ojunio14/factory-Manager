@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnlwsk5gyyljm"]
+
+[ext_resource type="Script" uid="uid://dqttmqgftivxq" path="res://src/script/player/player.gd" id="1_dv4au"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rvtwr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvtwr"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dv4au"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_mask = 8
+script = ExtResource("1_dv4au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_rvtwr")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, 0.541675, -0.45452, 0, 0.642788, 0.766045, 0.707107, -0.541675, 0.45452, -7, 12, 7)
+projection = 1
+size = 20.0
+near = 0.695
+far = 60.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_rvtwr")
+mesh = SubResource("CapsuleMesh_dv4au")

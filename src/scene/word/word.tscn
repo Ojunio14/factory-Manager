@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkesb10jedlo5"]
+[gd_scene load_steps=6 format=3 uid="uid://bkesb10jedlo5"]
 
 [ext_resource type="PackedScene" uid="uid://dkpfxqnq1syxj" path="res://src/scene/blocos_estrutura/bloco_inicial.tscn" id="1_5qs3y"]
+[ext_resource type="PackedScene" uid="uid://dnlwsk5gyyljm" path="res://src/scene/player/player.tscn" id="2_nwjlu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nwjlu"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -25,3 +26,6 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Bloco_Inicial" parent="." instance=ExtResource("1_5qs3y")]
+
+[node name="Player" parent="." instance=ExtResource("2_nwjlu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
