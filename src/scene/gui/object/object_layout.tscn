@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://t2jutggu811x"]
+
+[ext_resource type="Script" uid="uid://b2rkyf14ospne" path="res://src/script/gui/object_layout_menu/object_layout.gd" id="1_ufchy"]
+
+[sub_resource type="Gradient" id="Gradient_lsggy"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h5do2"]
+gradient = SubResource("Gradient_lsggy")
+width = 60
+height = 60
+
+[sub_resource type="Gradient" id="Gradient_h5do2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ufchy"]
+gradient = SubResource("Gradient_h5do2")
+
+[node name="object_layout" type="Control"]
+custom_minimum_size = Vector2(80, 90)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ufchy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = SubResource("GradientTexture2D_h5do2")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "asdrte"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "teste"
+icon = SubResource("GradientTexture2D_ufchy")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true

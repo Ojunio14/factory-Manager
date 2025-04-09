@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bts6smhiswy77"]
+
+[ext_resource type="PackedScene" uid="uid://cg50d7knv42nm" path="res://src/scene/gui/menu/menu_barra_inferior.tscn" id="1_7arlq"]
+[ext_resource type="PackedScene" uid="uid://be3lwhu2uh35m" path="res://src/scene/gui/menu/menu_de_objetos.tscn" id="3_2hhg3"]
+
+[node name="Control_Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu_de_Objetos" parent="." instance=ExtResource("3_2hhg3")]
+
+[node name="Menu_Barra_inferior" parent="." instance=ExtResource("1_7arlq")]
+layout_mode = 1
+offset_left = -50.0
+offset_right = 50.0

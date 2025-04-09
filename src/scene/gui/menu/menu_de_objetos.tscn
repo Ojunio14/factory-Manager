@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=3 uid="uid://be3lwhu2uh35m"]
+
+[ext_resource type="Script" uid="uid://bc04cisbwpkdc" path="res://src/script/gui/menu/menu_de_objetos.gd" id="1_edj3r"]
+[ext_resource type="PackedScene" uid="uid://t2jutggu811x" path="res://src/scene/gui/object/object_layout.tscn" id="2_qilg7"]
+
+[sub_resource type="Gradient" id="Gradient_diq1p"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ogj2"]
+gradient = SubResource("Gradient_diq1p")
+width = 60
+height = 60
+
+[node name="Menu_de_Objetos" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 410.0
+script = ExtResource("1_edj3r")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 1
+offset_right = 250.0
+offset_bottom = 442.0
+
+[node name="VBox_Esteira" type="VBoxContainer" parent="HFlowContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button_Esteira" type="Button" parent="HFlowContainer/VBox_Esteira"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "esteira"
+
+[node name="Grid_Esteira" type="GridContainer" parent="HFlowContainer/VBox_Esteira"]
+visible = false
+layout_mode = 2
+columns = 3
+
+[node name="object_layout" parent="HFlowContainer/VBox_Esteira/Grid_Esteira" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="VBox_Maquinas" type="VBoxContainer" parent="HFlowContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button_Maquinas" type="Button" parent="HFlowContainer/VBox_Maquinas"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "maquinas"
+
+[node name="Grid_Maquinas" type="GridContainer" parent="HFlowContainer/VBox_Maquinas"]
+visible = false
+layout_mode = 2
+columns = 3
+
+[node name="Control6" type="Control" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas"]
+visible = false
+custom_minimum_size = Vector2(80, 90)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas/Control6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas/Control6/VBoxContainer"]
+layout_mode = 2
+icon = SubResource("GradientTexture2D_3ogj2")
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas/Control6/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "asdrte"
+
+[node name="object_layout" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout2" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout3" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout4" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout5" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout6" parent="HFlowContainer/VBox_Maquinas/Grid_Maquinas" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HFlowContainer/VBoxContainer"]
+layout_mode = 2
+text = "construçao"
+
+[node name="GridContainer" type="GridContainer" parent="HFlowContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="object_layout" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout2" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout3" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout4" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout5" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[node name="object_layout6" parent="HFlowContainer/VBoxContainer/GridContainer" instance=ExtResource("2_qilg7")]
+layout_mode = 2
+
+[connection signal="button_down" from="HFlowContainer/VBox_Esteira/Button_Esteira" to="." method="_on_button_esteira_button_down"]
+[connection signal="button_down" from="HFlowContainer/VBox_Maquinas/Button_Maquinas" to="." method="_on_button_maquinas_button_down"]

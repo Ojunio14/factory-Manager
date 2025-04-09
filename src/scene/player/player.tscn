@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnlwsk5gyyljm"]
+[gd_scene load_steps=6 format=3 uid="uid://dnlwsk5gyyljm"]
 
 [ext_resource type="Script" uid="uid://dqttmqgftivxq" path="res://src/script/player/player.gd" id="1_dv4au"]
+[ext_resource type="PackedScene" uid="uid://bts6smhiswy77" path="res://src/scene/gui/canvas_layer_main.tscn" id="2_2kuqd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rvtwr"]
 
@@ -26,3 +27,5 @@ far = 60.0
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_rvtwr")
 mesh = SubResource("CapsuleMesh_dv4au")
+
+[node name="Control_Main" parent="." instance=ExtResource("2_2kuqd")]
